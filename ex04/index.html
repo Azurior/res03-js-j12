@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Une courte phrase qui décrit ce que fait votre page" />
+      <meta name="keywords" content="Une série de mots clés repr'sentants les sujets principaux de votre site ou de votre page" />
+      <meta name="author" content="Azu" />
+      <meta name="referrer" content="origin" />
+      <meta property="og:title" content="Le titre de la page" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+      <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+      <meta property="og:description" content="La description" />
+      <meta property="og:locale" content="fr_FR" />
+      <meta property="og:site_name" content="Le nom du site" />
+      <title>Titre de la page</title>
+      <link rel="stylesheet" href="assets/style/css/style.css">
+    </head>
+    <body>
+        <section id="app">  
+            <h2>Tâches à faire : </h2>  
+            <ul>        
+        	    <li v-for="task in tasks">
+        	        <input type="checkbox" name="checkbox"/>
+                    {{ task }}  
+                </li>  
+            </ul>    
+            <form @submit.prevent="addTask">  
+                <fieldset>            
+        	        <label for="task">Saisir une nouvelle tâche :</label>  
+                    <input type="text" name="task" id="task" />  
+                </fieldset>        
+                <button type="submit">Ajouter la nouvelle tâche</button>  
+            </form>
+        </section>
+        <script type="module" src="assets/js/index.js"></script>
+    </body>
+</html>
